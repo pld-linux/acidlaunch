@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2.1
 Group:		X11/Applications
 Source0:	http://linuxgamers.net/download/%{name}-%{version}.tar.gz
+# Source0-md5:	7c90e429d5883b9f109a52e024597fab
 URL:		http://linuxgamers.net/infoPage.php?page=acidlaunchh
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
