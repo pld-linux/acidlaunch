@@ -58,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/acidlaunch
+%dir %{_datadir}/%{name}
 %attr(644,root,root) %{_datadir}/%{name}/default.png
 %attr(644,root,root) %{_datadir}/%{name}/config.xml
 %{_mandir}/man1/*.1*
