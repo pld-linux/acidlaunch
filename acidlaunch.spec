@@ -17,7 +17,6 @@ BuildRequires:	gtk+-devel
 BuildRequires:	libxml2-devel > 2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 acidlaunch is a small, light-weight app launcher with a simple
 XML-based configuration syntax. It's written in C++ using gtk,
