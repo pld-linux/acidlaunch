@@ -11,9 +11,9 @@ URL:		http://linuxgamers.net/infoPage.php?page=acidlaunchh
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	gdk-pixbuf-devel > 0.9.0
 BuildRequires:	gtk+-devel
+BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -58,6 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/acidlaunch
 %dir %{_datadir}/%{name}
-%attr(644,root,root) %{_datadir}/%{name}/default.png
-%attr(644,root,root) %{_datadir}/%{name}/config.xml
+%{_datadir}/%{name}/default.png
+%{_datadir}/%{name}/config.xml
 %{_mandir}/man1/*.1*
