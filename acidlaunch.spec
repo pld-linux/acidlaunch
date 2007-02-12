@@ -1,5 +1,5 @@
 Summary:	Small, light-weight app launcher with a simple XML-based configuration
-Summary(pl.UTF-8):   Mały, lekki program do uruchamiania aplikacji z prostą konfiguracją w XML-u
+Summary(pl.UTF-8):	Mały, lekki program do uruchamiania aplikacji z prostą konfiguracją w XML-u
 Name:		acidlaunch
 Version:	0.5
 Release:	1
