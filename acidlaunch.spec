@@ -1,5 +1,5 @@
 Summary:	Small, light-weight app launcher with a simple XML-based configuration
-Summary(pl):	Ma³y, lekki program do uruchamiania aplikacji z prost± konfiguracj± w XML-u
+Summary(pl.UTF-8):   MaÅ‚y, lekki program do uruchamiania aplikacji z prostÄ… konfiguracjÄ… w XML-u
 Name:		acidlaunch
 Version:	0.5
 Release:	1
@@ -24,11 +24,11 @@ gdk-pixbuf and libxml2. It's great as a small, simple app launcher,
 and it can optionally run in a withdrawn mode for embedding in the
 blackbox slit.
 
-%description -l pl
-acidlaunch jest ma³ym, lekkim programem do uruchamiania aplikacji z
-konfiguracj± o prostej sk³adni, bazuj±c± na XML-u. Jest napisany w C++
-z u¿yciem gtk, gdk-pixbuf i libxml2. Jest wspania³y jako ma³e
-narzêdzie do uruchamiania aplikacji i mo¿e opcjonalnie uruchamiaæ w
+%description -l pl.UTF-8
+acidlaunch jest maÅ‚ym, lekkim programem do uruchamiania aplikacji z
+konfiguracjÄ… o prostej skÅ‚adni, bazujÄ…cÄ… na XML-u. Jest napisany w C++
+z uÅ¼yciem gtk, gdk-pixbuf i libxml2. Jest wspaniaÅ‚y jako maÅ‚e
+narzÄ™dzie do uruchamiania aplikacji i moÅ¼e opcjonalnie uruchamiaÄ‡ w
 trybie osadzenia w szczelinie blackboksa.
 
 %prep
