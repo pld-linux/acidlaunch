@@ -1,0 +1,11 @@
+--- acidlaunch-0.5/src/launcherwindow.cc.old	2008-03-18 21:25:53.000000000 +0100
++++ acidlaunch-0.5/src/launcherwindow.cc	2008-03-18 21:26:11.000000000 +0100
+@@ -52,7 +52,7 @@ LauncherWindow::LauncherWindow()
+ 	gtk_widget_realize(_window);
+ 	
+ 	/* ditch the window decorations */
+-	gdk_window_set_decorations(_window->window, (enum GdkWMDecoration)0);
++	gdk_window_set_decorations(_window->window, (GdkWMDecoration)0);
+ 
+ 	/* create the notebook for the main window */
+ 	_notebook = gtk_notebook_new();
