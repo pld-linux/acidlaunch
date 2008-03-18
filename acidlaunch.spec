@@ -7,14 +7,17 @@ License:	GPL v2.1
 Group:		X11/Applications
 Source0:	http://linuxgamers.net/download/%{name}-%{version}.tar.gz
 # Source0-md5:	7c90e429d5883b9f109a52e024597fab
+Patch0:		%{name}-ac.patch
+Patch1:		%{name}-gcc4.patch
 URL:		http://linuxgamers.net/infoPage.php?page=acidlaunchh
-BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gdk-pixbuf-devel > 0.9.0
 BuildRequires:	gtk+-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.4.0
+BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,6 +36,8 @@ trybie osadzenia w szczelinie blackboksa.
 
 %prep
 %setup  -q
+%patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
