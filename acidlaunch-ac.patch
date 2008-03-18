@@ -1,0 +1,11 @@
+--- acidlaunch-0.5/configure.in.old	2008-03-18 21:22:15.000000000 +0100
++++ acidlaunch-0.5/configure.in	2008-03-18 21:22:30.000000000 +0100
+@@ -6,7 +6,7 @@ AM_INIT_AUTOMAKE(acidlaunch, 0.5)
+ AC_PROG_CXX
+ 
+ AM_PATH_XML2(2.4.0,
+-	[LIBS="$LIBS $XML_LIBS" CXXFLAGS="$CXXFLAGS $XML_CFLAGS"],
++	[LIBS="$LIBS $XML_LIBS" CXXFLAGS="$CXXFLAGS $XML_CPPFLAGS"],
+ 	AC_MSG_ERROR(Cannot find xml2-config))
+ 
+ AM_PATH_GDK_PIXBUF(0.9.0,
