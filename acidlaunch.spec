@@ -3,20 +3,21 @@ Summary(pl.UTF-8):	Mały, lekki program do uruchamiania aplikacji z prostą konf
 Name:		acidlaunch
 Version:	0.5
 Release:	1
-License:	GPL v2.1
+License:	LGPL v2.1
 Group:		X11/Applications
 Source0:	http://linuxgamers.net/download/%{name}-%{version}.tar.gz
 # Source0-md5:	7c90e429d5883b9f109a52e024597fab
 Patch0:		%{name}-ac.patch
 Patch1:		%{name}-gcc4.patch
-URL:		http://linuxgamers.net/infoPage.php?page=acidlaunchh
+Patch2:		%{name}-c++.patch
+URL:		http://linuxgamers.net/infoPage.php?page=acidlaunch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gdk-pixbuf-devel > 0.9.0
-BuildRequires:	gtk+-devel
+BuildRequires:	gdk-pixbuf-devel >= 0.9.0
+BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel > 2.4.0
+BuildRequires:	libxml2-devel >= 2.4.0
 BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,21 +36,21 @@ narzędzie do uruchamiania aplikacji i może opcjonalnie uruchamiać w
 trybie osadzenia w szczelinie blackboksa.
 
 %prep
-%setup  -q
+%setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_mandir}/man3}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
@@ -65,4 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/default.png
 %{_datadir}/%{name}/config.xml
-%{_mandir}/man1/*.1*
+%{_mandir}/man1/acidlaunch.1*
